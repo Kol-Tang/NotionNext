@@ -8,11 +8,11 @@
 
 ## 前言
 
-遵循此教程您将在[Vercel](https://tangly1024.com/article/vercel)上免费搭建一个[NotionNext](https://docs.tangly1024.com/about)博客。
+遵循此教程您将在[Vercel](https://tangly1024.com/article/vercel)上免费搭建一个[NotionNext](/user-guide/intro)博客。
 
 > **❓**
 >
-[NotionNext](https://docs.tangly1024.com/about)是一个完全开源免费的建站脚本，将您的[Notion](https://blog.tangly1024.com/article/notion)笔记实时渲染成博客。
+[NotionNext](/user-guide/intro)是一个完全开源免费的建站脚本，将您的[Notion](https://blog.tangly1024.com/article/notion)笔记实时渲染成博客。
 >
 > Vercel是一个来自国外的在线脚本托管平台，对于个人使用，其免费版已经完全足够，因此您无需购买服务器即可搭建自己的网站。
 
@@ -33,7 +33,7 @@
 
 1. 在Vercel中一键部署
 
-部署文档已经过大量网友实践验证，如您实在无法完成独立部署，可以考虑[向我们求助](https://docs.tangly1024.com/article/my-service)。
+部署文档已经过大量网友实践验证，如您实在无法完成独立部署，可以考虑[向我们求助](/user-guide/help/support)。
 
 
 ### 视频帮助
@@ -41,49 +41,6 @@
 **我录了一个1分38秒的简略视频**，演示了整个部署过程，最终以文档为主。
 
 https://player.bilibili.com/player.html?aid=913088616&bvid=BV1fM4y1L7Qi&cid=1203316294&page=1
-
-- 另外有Youtube网友也分享了部署的过程，可以参考
-[将您的Notion笔记变为博客站，所有文章的编写发布都只在您的Notion笔记中完成，小白也能快速地搭建自己的网站](https://www.youtube.com/watch?v=zWlPyDQCkrk)
-
-首先，借助NotionNext建站，所有文章的编写发布都只在您的Notion笔记中完成，Notion笔记支持在电脑与手机上随时访问；因此您无需登录任何第三方平台、或打开WordPress后台、或者通过写Git上传等繁琐的方式来发布文章。
-其次，Notion 是一款将笔记、在线文档、知识库和任务管理无缝整合的「All-In-One」应用，它也是我一直在用、并且极力推荐的一款笔记软件
-借助Notion灵活的排版以及便捷的写作体验，您不需要专门学习Markdown语法，也可以轻松随时随地写出调理清晰的文章，以便记录您的创意与灵感。站点数据完全保存在Notion笔记当中，您可以随时导出本地进行备份。
-Notion AI
-Notion集成了Open AI，能大大提升您的写作效率，这也是Notion作为笔记工具的理由之一。
-最后，NotionNext 只是一个将您的笔记转成网站的小工具，并不是一个繁重的系统，之后还可以选择其他的工具和软件渲染您的笔记。
-
-===============================
-🔔订阅我的频道，第一时间通知您最新的更新!🔔
-👉Subscribe: https://www.youtube.com/@maple_tech
-===============================
-chapter章节：
-00:00 介绍
-00:30 安装NotionNext
-01:30 配置Github
-01:48 配置Vercel
-03:40 绑定自己的域名
-04:35 把域名配置到cloudflare管理
-06:32 效果演示
-
-===============================
-相关资源：
-https://github.com/tangly1024/NotionNext
-https://www.namesilo.com/
-===============================
-🔽 与我联系
-Twitter: https://twitter.com/MapleNext
-Telegram: https://t.me/+1UCf0K0yi4tiMDEx
-===============================
-#notion #博客 #建站
-[零基础入门NotionNext网站搭建、个人博客、网站快速搭建部署教程 | 无需编程教学 | All in one | 404实验室](https://www.youtube.com/watch?v=AbI70b9KfXE)
-
-订阅频道▶https://www.youtube.com/channel/UCm84OFeAJCPqerpjCFOrVwg?sub_confirmation=1
-博客▶https://404lab.cc/
-TG群组▶https://bit.ly/404Lab
-海豚湾▶https://bit.ly/3Y2DgBZ
-接码平台▶https://bit.ly/3ryxig9
-
-
 ## 一、创建您的Notion页面
 
 
@@ -111,20 +68,28 @@ TG群组▶https://bit.ly/404Lab
   - 如下图所示：
 ![Untitled](/legacy/3be621dcdd736f88.png)
   - 页面ID注意
-> **❓**
+
+> **如何识别页面ID**
 >
-👇以下我的**共享链接，**其中**标红****加粗**下划线部分才是**页面ID**！要忽略_`**?**`_`**v=**`后面的英文数字。
-> [https://www.notion.so/tanghh/](https://www.notion.so/tanghh/)**02ab3b8678004aa69e9e415905ef32a5**_?_v=b7eb215720224ca5827bfaa5ef82cf2d
-> 👇我的**页面ID **是
->  **02ab3b8678004aa69e9e415905ef32a5**
-> **⚠️**
+> 页面 ID 是 Notion 共享链接中那段**连续 32 位的字母和数字**。只复制这 32 位字符串即可，不要复制 `?v=`、`?pvs=` 以及它们后面的参数。
 >
-新版的notion中，页面ID的格式可能会有一点不同，例如会把页面的标题也带上：
-> [https://www.notion.so/tanghh/Today-](https://www.notion.so/tanghh/Today-)`261c36d269a74acd97682af86d7bc9a0`?pvs=4
-> 但不变的是，页面 url 中的那串连续 32 位的字符串就是 id。
-> **❓**
+> 示例一：
 >
-请将您的**页面ID记录下来，**在步骤三会用到。
+> `https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5?v=b7eb215720224ca5827bfaa5ef82cf2d`
+>
+> 这里的页面 ID 是：
+>
+> `02ab3b8678004aa69e9e415905ef32a5`
+>
+> 示例二：新版 Notion 可能会把页面标题放进链接里，例如：
+>
+> `https://www.notion.so/tanghh/Today-261c36d269a74acd97682af86d7bc9a0?pvs=4`
+>
+> 这里的页面 ID 是：
+>
+> `261c36d269a74acd97682af86d7bc9a0`
+
+请将您的**页面ID**记录下来，步骤三配置环境变量时会用到。
 
 
 ## 二、复制源代码
@@ -223,7 +188,7 @@ NotionNext会实时抓取Notion笔记内容
 
 接下来，请访问下方的《**NotionNext 操作手册**》获取更多站点配置的帮助！
 
-[NotionNext-快速免费搭建网站 | NotionNext文档](https://docs.tangly1024.com/about)
+[NotionNext-快速免费搭建网站 | NotionNext文档](/user-guide/intro)
 
 无需服务器、即使是小白也能几分钟搭建自己的独立博客站～如果你在使用Notion这款神级笔记本的话，不妨来试试顺手建个网站🤣🤣🤣，这是一款基于NotionAPI的博客系统。
 
