@@ -96,8 +96,8 @@ const maxOutputTokens = (value: string | undefined) => {
 }
 
 const textFromMessage = (message?: UIMessage) =>
-  message.parts
-    ?.map(part => (part.type === 'text' ? part.text : ''))
+  message?.parts
+    .map(part => (part.type === 'text' ? part.text : ''))
     .join('') || ''
 
 const lastUserText = (messages: UIMessage[]) =>
